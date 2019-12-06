@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+}
+
+.body{
+  height: calc(100vw - 100px);
+  width: 100vw;
+  
+}
+
+a{
+  text-decoration: none;
+  float: right;
+  color: #38AEF0;
+}
+
+.wrapper{
+  height: 100vw;
+  width: 100vw;
+}
+
+    .chat-main__group-info{
+      background-color: #ffffff;
+      height: 100px;
+      width: calc(100vw - 300px);
+      float: right;
+      margin-top: -100px;
+      border-bottom: 1px solid #eeeeee;
+      padding: 0 40px;
+
+      &-name {
+        padding-top: 35px;
+        width: 60px;
+        color: #333333;
+        font-size: 20px;
+      }
+
+      &-edit{
+        display: flex;
+        justify-content: flex-end;
+        float: right;
+        margin-top: -30px;
+        height: 45px;
+        width: 70px;
+        line-height: 45px;
+        padding-right: 20px;
+        border: 1px solid #38AEF0;
+       }
+
+      &-members{
+        padding-top: 15px;
+        color: #999999;
+        font-size: 12px;
+       }  
+      
+    }
+    
+    .chat-main{
+      height: calc(100vw - 90px);
+      width: calc(100vw - 300px);
+      float: right;
+      background-color: #fafafa;
+      padding-left: 40px;
+
+      &__messages{
+        display: flex;
+        height: 100px;
+        width: 500px;
+        padding-top: 35px;
+
+        &-writer-name{
+          color: #333333;
+          font-size: 16px;
+          width: 60px;
+          height: 20px;
+          line-height: 20px;
+
+          &-contents{
+            color: #434A54;
+            font-size: 14px;
+            padding-top: 12px;
+            width: 300px;
+            padding-bottom: 11px;
+          }
+        }
+        
+          
+        }
+
+      &__data{
+        color: #999999;
+        font-size: 12px;
+        height: 12px;
+        width: 100px;
+        padding-top: 5px;
+      }
+
+      }
+
+    .chat-main__message-form{
+      background-color: #d2d2d2;
+      height: 90px;
+      width: calc(100vw - 300px);
+      float: right;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+
+      &-one{
+        width: 950px;
+        height: 50px;
+        background-color: white;
+        margin-top: 25px;
+        margin-left: 40px;
+      
+        &-type{
+          &-icon{
+            float: right;
+          }
+        }
+        
+      }
+
+      &-send{
+        height: 50px;
+        width: 85px;
+        float: right;
+        background-color:#38AEF0;
+        color: white;
+        margin-top: -50px;
+        margin-right: 45px;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+    
+
+    
+
+    .sidebar_user-name{
+      background-color: #253141;
+      height: 100px;
+      width: 300px;
+      }
+
+      .sidebar__user{
+        background-color:#253141;
+        height: 20px;
+        width: 260px;
+        margin-left: 20px;
+        margin-top: -60px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        &-name-space{
+          color: white;
+          }
+
+        &-icon-space{
+          width: 60px;
+          text-align: right;
+          }
+        }
+  
+
+    
+
+  .sidebar__group-list{
+    width: 300px;
+    height: 100vw;
+    background-color: #2f3e51;
+    float: left;
+
+    &-one{
+      height: 91px;
+      background-color:#2f3e51;
+      padding: 0 20px;
+
+      &-name{
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 15px;
+        padding-top: 20px;
+      }
+
+      &-message{
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 11px;
+        padding-top: 5px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+
+  .fas.fa-pen:before{
+    color: white ;
+    }
+  
+    .fas.fa-cog:before{
+    color: white ;
+    margin-left: 5px;
+    }
+
+  i{
+    font-size: 15px;
+    color: black;
+  }
+
+  label {
+    background:white;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 30px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    float: right;
+    padding-right: 0px;
+  }
+  label input {
+    display: none;
+  }
+
+  input{
+    height: 50px;
+    width: 895px;
+    padding-left: 10px;
+  }
+    
+
+    
+    
+    
+    
+
