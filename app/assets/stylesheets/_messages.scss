@@ -8,11 +8,7 @@
   
 }
 
-a{
-  text-decoration: none;
-  float: right;
-  color: #38AEF0;
-}
+
 
 .wrapper{
   height: 100vw;
@@ -45,6 +41,10 @@ a{
         line-height: 45px;
         padding-right: 20px;
         border: 1px solid #38AEF0;
+          &-font{
+            color: #38AEF0;
+          }
+        
        }
 
       &-members{
@@ -127,8 +127,8 @@ a{
         float: right;
         background-color:#38AEF0;
         color: white;
+        margin-right: -150px;
         margin-top: -50px;
-        margin-right: 45px;
         line-height: 50px;
         text-align: center;
       }
@@ -209,28 +209,27 @@ a{
     color: black;
   }
 
-  label {
-    background:white;
+  
+
+  .input-space{
+    height: 50px;
+    width: 900px;
+  }
+
+  .bbb{
+    width: 0px;
     color: #fff;
     cursor: pointer;
     padding: 15px 30px;
-    margin: 0 10px 0 0;
     display: inline-block;
     float: right;
     padding-right: 0px;
-  }
-  label input {
-    display: none;
+
   }
 
-  input{
-    height: 50px;
-    width: 895px;
-    padding-left: 10px;
+  .edit{
+    color: #38AEF0;
   }
-    
-
-    
     
     
     
