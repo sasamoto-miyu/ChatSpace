@@ -1,33 +1,21 @@
 
 .chat-main__group-info
   .chat-main__group-info-name
-    test
+    = @group.name
     %br
   .chat-main__group-info-edit
     .chat-main__group-info-edit-font
-      =link_to "#",class: "edit" do
+      =link_to edit_group_path(current_user),class: "edit" do
         Edit
   .chat-main__group-info-members
-    Member:Miyu
-
+    Member:
+    - @group.group_users.each do |group_user|
+      = group_user.user.name
 
 .chat-main
-  .chat-main__messages
-    .chat-main__messages-writer-name
-      Miyu
-      .chat-main__messages-writer-name-contents
-        おはよう!
-    .chat-main__data
-      2019/12/6(Fri)10:00
-
-  .chat-main__messages
-    .chat-main__messages-writer-name
-      Miyu
-      .chat-main__messages-writer-name-contents
-        おはよう!
-    .chat-main__data
-      2019/12/6(Fri)10:00
-
+  .messages
+    = render @messages
+  
 
   .form
     = form_for [@group, @message] do |f|
