@@ -2,7 +2,7 @@
 @import "./reset";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
-@import "./messages";
+@import "modules/messages";
 @import "modules/flash";
 @import "modules/user";
-@import "modules/group"
+@import "modules/group";
