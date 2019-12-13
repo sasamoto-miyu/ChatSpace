@@ -1,21 +1,22 @@
-.sidebar_user-name
-  .sidebar_user-name__user
-    %h3.sidebar__user-name__user-space
-      = current_user.name
-  .sidebar_user-name__user-icon-space
-    = link_to edit_user_path(current_user) do
-      %i.fas.fa-cog
-    = link_to new_group_path do
-      %i.fas.fa-pen
-.sidebar__group-list
-  - current_user.groups.each do |group|
-    .sidebar__group-list-one
-      = link_to group_messages_path(group) do
-        .sidebar__group-list-one-name
-          = group.name
-          %br
-        .sidebar__group-list-one-messages
-          = group.show_last_message
-          %br
+.sidebar
+  .sidebar_user-name
+    .sidebar_user-name__user
+      %h3.sidebar__user-name__user-space
+        = current_user.name
+    .sidebar_user-name__user-icon-space
+      = link_to edit_user_path(current_user) do
+        %i.fas.fa-cog
+      = link_to new_group_path do
+        %i.fas.fa-pen
+  .sidebar__group-list
+    - current_user.groups.each do |group|
+      .sidebar__group-list-one
+        = link_to group_messages_path(group) do
+          .sidebar__group-list-one-name
+            = group.name
+            %br
+          .sidebar__group-list-one-messages
+            = group.show_last_message
+            %br
     
       
