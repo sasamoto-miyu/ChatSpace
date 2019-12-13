@@ -1,11 +1,13 @@
-.chat-main__messages-writer-name
-  = message.user.name
-  .chat-main__messages-writer-name-content
-- if message.content.present?
-  %p.chat-main__messages-writer-name-content
-    = message.content
-= image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-.chat-main__data
-  = message.created_at.strftime("%Y/%m/%d %H:%M")
+.messages
+  .chat-main__messages-writer-name
+    = message.user.name
+  .chat-main__messages-data
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  - if message.content.present?
+    %p.chat-main__messages-writer-name-content
+      = message.content
+      %br
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  
 
   

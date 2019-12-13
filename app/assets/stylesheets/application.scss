@@ -6,3 +6,21 @@
 @import "modules/flash";
 @import "modules/user";
 @import "modules/group";
+
+*{
+  box-sizing: border-box;
+}
+
+// .body{
+//   height: calc(100vw - 100px);
+//   width: 100vw;
+  
+// }
+
+
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}

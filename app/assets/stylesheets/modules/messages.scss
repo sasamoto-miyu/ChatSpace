@@ -1,34 +1,21 @@
-*{
-  box-sizing: border-box;
-}
-
-.body{
-  height: calc(100vw - 100px);
-  width: 100vw;
-  
-}
-
-
-
-.wrapper{
-  height: 100vw;
-  width: 100vw;
-}
-
-  
-
+  .main{
+    position: relative;
+  }
+      
     .chat-main__group-info{
       background-color: #ffffff;
-      height: 100px;
+      height: 200px;
       width: calc(100vw - 300px);
-      float: right;
+      //float: right;
       margin-top: -100px;
       border-bottom: 1px solid #eeeeee;
       padding: 0 40px;
 
       &-name {
         padding-top: 35px;
-        width: 60px;
+        width: 300px;
+        height: 30px;
+        padding-top: 130px;
         color: #333333;
         font-size: 20px;
       }
@@ -37,7 +24,7 @@
         display: flex;
         justify-content: flex-end;
         float: right;
-        margin-top: -30px;
+        margin-top: -10px;
         height: 45px;
         width: 70px;
         line-height: 45px;
@@ -50,7 +37,8 @@
        }
 
       &-members{
-        padding-top: 15px;
+        height: 30px;
+        padding-top: 50px;
         color: #999999;
         font-size: 12px;
        }  
@@ -59,31 +47,60 @@
     
     
     .chat-main{
-      height: calc(100vw - 90px);
+      height: calc(100vh - 170px);
       width: calc(100vw - 300px);
-      float: right;
+      //float: right;
       background-color: #fafafa;
+
+      
       
 
       &__messages{
-        display: flex;
-        width: 500px;
         padding-top: 45px;
         margin-left: -20px;
+        height: 80vh;
+        overflow: scroll;
+        
+
+        .lower-message__image{
+          width: 100px;
+          height: 100px;
+        }
+        
+        
+
+
+        &-data{
+          color: #999999;
+          font-size: 12px;
+          height: 12px;
+          width: 150px;
+          margin-bottom: 40px;
+          color: #999999;
+          margin-left:100px;
+          margin-top: -20px;
+        }
+
+      
+
+
+        
+        
 
         &-writer-name{
           color: #333333;
           font-size: 16px;
-          width: 60px;
           height: 20px;
           line-height: 20px;
-          padding-top: 40px;
           padding-left: 55px;
+          width: 100px;
+
+          
+          
 
           &-content{
             color: #434A54;
             font-size: 14px;
-            padding-top: 12px;
             width: 300px;
             padding-bottom: 50px;
             margin-top: 16px;
@@ -94,17 +111,9 @@
           
         }
 
-      &__data{
-        color: #999999;
-        font-size: 12px;
-        height: 12px;
-        width: 150px;
-        margin-left: 95px;
-        margin-top: -90px;
-        margin-bottom: 40px;
-      }
+     
 
-      }
+    }
 
 
 
@@ -112,7 +121,7 @@
         background-color: #d2d2d2;
         height: 90px;
         width: calc(100vw - 300px);
-        float: right;
+        //float: right;
         position: fixed;
         bottom: 0px;
         right: 0px;
@@ -151,36 +160,33 @@
       background-color: #253141;
       height: 100px;
       width: 300px;
-      }
+      
 
-      .sidebar__user{
-        background-color:#253141;
-        height: 20px;
-        width: 260px;
-        margin-left: 20px;
-        margin-top: -60px;
+      &__user{
+        font-size: 20px;
+        color: white;
+        padding-left: 20px;
         line-height: 20px;
-        display: flex;
-        justify-content: space-between;
-
-        &-name-space{
-          color: white;
-          }
-
+        padding-top: 30px;
+  
         &-icon-space{
           width: 60px;
           text-align: right;
+          margin-left: 200px;
+          margin-top: -20px;
           }
         }
+
+      }
   
 
     
 
   .sidebar__group-list{
     width: 300px;
-    height: 100vw;
     background-color: #2f3e51;
-    float: left;
+    height: 710px;
+    overflow: scroll;
 
     &-one{
       height: 91px;
@@ -211,7 +217,6 @@
   
     .fas.fa-cog:before{
     color: white ;
-    margin-left: 5px;
     }
 
   i{
@@ -246,9 +251,7 @@
     height: 90px;
     width: 1140px;
     padding: 10px 50px 20px 40px;
-    position: fixed;
-        bottom: 0px;
-        right: 0px;
+    position: absolute;
   
     
     &__message {
@@ -281,6 +284,7 @@
       padding: 0 30px;
     }
 }
+
 
 
     
