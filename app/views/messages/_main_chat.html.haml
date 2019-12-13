@@ -5,12 +5,12 @@
     %br
   .chat-main__group-info-edit
     .chat-main__group-info-edit-font
-      =link_to edit_group_path(current_user),class: "edit" do
+      =link_to edit_group_path(@group),class: "edit" do
         Edit
   .chat-main__group-info-members
     Member:
-    - @group.group_users.each do |group_user|
-      = group_user.user.name
+    - @group.users.each do |user|
+      = user.name
 
 .chat-main
   .chat-main__messages
