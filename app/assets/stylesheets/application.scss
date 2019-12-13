@@ -6,3 +6,14 @@
 @import "modules/flash";
 @import "modules/user";
 @import "modules/group";
+
+*{
+  box-sizing: border-box;
+}
+
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
