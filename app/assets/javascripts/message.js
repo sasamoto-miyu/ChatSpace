@@ -1,8 +1,7 @@
 $(function(){
   function buildHTML(message){
-
     if (message.image) {
-      var html = `<div class="messages">
+      var html = `<div class="messages" data-message-id= ${message.id}>
                     <div class="chat-main__messages-writer-name">
                      ${message.user_name}
                     </div>
@@ -15,8 +14,8 @@ $(function(){
                       <img class="lower-message__image" src="${message.image}">
                     </p>
                   </div>`                  
-    } else {
-      var html = `<div class="messages">
+    } else if (message.content) {
+      var html = `<div class="messages" data-message-id = ${message.id}>
                     <div class="chat-main__messages-writer-name">
                       ${message.user_name}
                     </div>
@@ -27,8 +26,19 @@ $(function(){
                       ${message.content}
                     </p>
                   </div>`     
-
-    }
+    } else if (message.image) {
+      var html = `<div class="messages" data-message-id= ${message.id}>
+                    <div class="chat-main__messages-writer-name">
+                     ${message.user_name}
+                    </div>
+                    <div class="chat-main__messages-data">
+                      ${message.created_at}
+                    </div>
+                  </div>
+                  <div class="lower-message">
+                   <img src= ${message.image} class= "lower-message__image">
+                  </div>`  
+    };
     return html
   }
   
@@ -58,6 +68,31 @@ $(function(){
       alert('メッセージ送信に失敗しました');
     });
 
-  })
-})
+    
+  });
+
+  var reloadMessages = function() {
+    if(location.href.match(/\/groups\/[+-]?\d+\/messages/)){
+    last_message_id = $('.messages:last').data('message-id')
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      var insertHTML = '';
+      $.each(messages, function(i, message) {
+        insertHTML += buildHTML(message)
+      });
+      $('.messages:last').append(insertHTML);
+      $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
+    })
+    .fail(function() {
+      alert('error');
+    });
+  }
+  };
+  setInterval(reloadMessages, 7000);
+});
 
