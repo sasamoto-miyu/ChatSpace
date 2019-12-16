@@ -36,7 +36,7 @@ $(function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                   <img src= "message.image" class= "lower-message__image">
+                   <img src= ${message.image} class= "lower-message__image">
                   </div>`  
     };
     return html
@@ -89,7 +89,7 @@ $(function(){
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   }
   };
