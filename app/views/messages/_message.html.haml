@@ -1,4 +1,4 @@
-.messages
+.messages{ data:{ message: {id: message.id}}}
   .chat-main__messages-writer-name
     = message.user.name
   .chat-main__messages-data
@@ -8,6 +8,3 @@
       = message.content
       %br
       = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-  
-
-  
