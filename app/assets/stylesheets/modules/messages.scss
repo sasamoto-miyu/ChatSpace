@@ -45,7 +45,7 @@
     
     
     .chat-main{
-      height: calc(100vh - 170px);
+      height: calc(100vh - 190px);
       width: calc(100vw - 300px);
       background-color: #fafafa;
 
@@ -150,9 +150,10 @@
       }
       
 
-    
-
-    .sidebar_user-name{
+    .side_bar{
+      height: 100vh;
+    }
+    .side_bar_user-name{
       background-color: #253141;
       height: 100px;
       width: 300px;
@@ -178,11 +179,12 @@
 
     
 
-  .sidebar__group-list{
+  .side_bar__group-list{
     width: 300px;
     background-color: #2f3e51;
-    height: 710px;
+    height: calc(100vh - 100px);
     overflow: scroll;
+    box-sizing: border-box;
     
 
     &-one{
