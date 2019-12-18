@@ -3,8 +3,7 @@
     = message.user.name
   .chat-main__messages-data
     = message.created_at.strftime("%Y/%m/%d %H:%M")
-  - if message.content.present?
-    %p.chat-main__messages-writer-name-content
-      = message.content
-      %br
-      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  %p.chat-main__messages-writer-name-content
+    = message.content if message.content.present?
+    %br
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
